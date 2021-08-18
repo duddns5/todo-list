@@ -13,6 +13,7 @@ let renderCurrentTime = () =>{
 }
 
 let renderUser = (event) => {
+	event.preventDefault();
 	let input = document.querySelector('.inp_username').value;
 	localStorage.setItem('username',input);
 	//넘어온 value값을 스토리지에 저장.
@@ -20,6 +21,7 @@ let renderUser = (event) => {
 }
 
 let registSchedule = (event) => {
+	event.preventDefault();
 	
 	let prevTodo = localStorage.getItem('todo');
 	let input = document.querySelector('.inp_todo').value;
